@@ -1,0 +1,45 @@
+/* Here h2 is an selector, color is an property and brown is an value. */
+h2{
+    color:brown; /* color property is used to set the color of foreground. */
+    background-color: blueviolet; /* background-color property is used to set the color of background. */
+}
+
+/* Color Systems */
+h3{
+    background-color: red ; /* 1)Named Colors: Each browser recognizes around 140 named colors like red,blue,green,purple,etc. */
+}
+
+h4{
+    background-color: rgb(255,255,0); /* 2)RGB Colors : RGB(Red,Green,Blue) defines each paramter the intensity of the color and can be integer from 0 to 255 or a percentage value from 0% to 100%. */
+}
+
+h5{
+    background-color: #ffa511; /* Hexadecimal Colors : A hexadecimal color is specified with #RRGGBB where the RR(Red),GG(Green) and BB(Blue) hexadecimal integers specify the component of the colors.All the values between 00 to FF. */
+}
+
+/* text-align : left | right | center | justify; It specifies the horizontal alignment of text in an element */
+h6{
+    text-align: right;
+}
+
+/* font-weight : The font-weight property sets how thick or thin characters in text should be displayed. */
+span{
+    font-weight: 700; /* font-weight : normal/400 | bold/700 | 100 | bolder | lighter. */
+}
+
+/* text-decoration : Sets the appearance of decoration lines on text like underline,overline,line-through,none,etc */
+a{
+    text-decoration: none; /* Remove the underline*/
+}
+
+
+/* Units in CSS : CSS has several different units for expressing a length .
+                  1)Absolute Unit : The absolute length units are fixed and a length expressed in any of these will appear as exactly that size Ex px,pt,pc,cm,mm,in,etc
+                  2)Relative Unit : Relative length units specify a length relative to another length property Ex %,em,rem,ch,vh,vw,etc   */
+div{
+    line-height:1.5; /* line-height : Controls the height of the line of text. */
+    letter-spacing:10px; /* letter-spacing : Controls the horizontal spacing behavior between text characters. */
+    font-size: 25px; /* font-size : It sets the size of a font. */
+    font-family: avant garde,didot,sans-serif; /* font-family : It specifies the font for an element and it prioritized list of one or more font family. */
+} 
+
