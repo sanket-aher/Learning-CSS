@@ -1,0 +1,137 @@
+/* Universal Selector : To select everything in a document. */
+*{
+    font-family: 'Courier New';
+}
+
+/* Element Selector : Select all elements of the same type */
+h1,h3{
+    color: #b92b27;
+}
+
+/* ID Selector : Select an element based on the value of the elements id attribute. */
+#login{
+    background-color: white;
+    color: black;
+}
+
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+
+/* Class Selector : Select an element based on their class attribute. */
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+
+/* Descendant Selector : It mateches all elements that are descendants of a special element. */
+p a{
+    color: purple;
+    background-color: yellow;
+}
+
+/* Adjacent Sibling Combinator : It is used to select an element that is directly after another specific element.Adjacent means "immediately following". */
+p + h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+/* Child Selector : The child selector selects all elements that are the children of a specified element. */
+div > input{
+    background-color: darkgray;
+}
+
+/* Attribute Selector : Selects elements based on the presence or value of a given atrribute */
+input[type = "text"]{
+    color:red;
+}
+
+input[type = "password"]{
+    color: green;
+}
+
+input[type]{
+    background-color: antiquewhite;
+}
+
+/* Pseudo Class :  A keyword added to a selector that specifies a special state of the selected elements.1):hover 2):active 3):checked 4):nth-of-type */
+/* 1):hover - It is used to select elements when you mouse over them. */
+span button:hover{
+    background-color: black;
+    color: white;
+}
+
+h3:hover{
+    text-decoration: none;
+}
+
+/* 2):active - It is used to select and style the active link.A link becomes active when you click on it. */
+span button:active{
+    background-color:red;
+    color: purple;
+}
+
+/* 3):checked - It matches every checked <input> element (only for radio buttons and checkboxes) and <option> element. */
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+}
+
+/* 4)nth-of-type - The :nth-of-type() pseudo-class matches elements based on their position among siblings of the same type. */
+li:nth-of-type(2) /* Select 2nd list only*/
+{
+    background-color: red;
+}
+
+li:nth-of-type(2n - 1) /* Select odd lists */
+{
+    background-color: green;
+}
+
+/* Pseudo Elements : A keyword added to a selector that lets you style a specific part of the selected elements. 1)::first-letter 2)::first-line 3)::selection */
+/* 1)::first-letter - It is used to add style to the first letter of the specified selector. */
+h1::first-letter{
+    color: greenyellow;
+}
+
+/* 2)::first-line - It is used to add style to the first line of the specified selector. */
+.lorems::first-line{
+    color:red;
+}
+
+/* 3)::selection - It matches the portion of an element that is selected by a user. */
+.lorems::selection{
+    background-color:rgb(247, 11, 160);
+}
+
+/* Cascading : The css cascade algorithm job is to select css declarations in order to determine the correct values for CSS properties.*/
+h6{
+    background-color: red;
+}
+
+h6{ /* This is selected due to cascading */
+    background-color: rosybrown;
+}
+
+/* Specificity : Specificity is an algorithm that calculates the weight that is applied to a given CSS declartion. inline style > id > class > element */
+#myh6{
+    font-size: 50px;
+}
+
+h6{
+ font-size: 10px;   
+}
+
+/* !important : To show the most specific thing in document. Specificity : !important > inline style > id > class > element */
+h1{
+    background-color: blueviolet !important; 
+}
+
+h1{
+    background-color: cadetblue;
+}
