@@ -1,0 +1,66 @@
+/* Box Model : The CSS Box model is essentially a box that wraps around every HTML element.It consists of width,height,border,margin and padding */
+div
+{
+    height:200px; /* It sets the content area height of the element */
+    width:500px; /* It sets the content area width of the element */
+    background-color: pink;
+    /* Border : It is used to set an element border. It consist of border-width,border-style and border-color. */
+    border-width:5px; /* Specifies the width of the border. */
+    border-style: solid; /* Specifies the style of the border. */
+    border-color: black; /* Specifies the color of the border. */
+    border: 5px solid black; /* The boder property is an shorthand property of border-width border-style border-color  */
+    /* Border Slides : To control an individual side of the box.1)border-left 2)border-right 3)border-top 4)border-bottom */
+    border-left: 5px dashed blue;
+    border-radius: 10px; /* border-radius : It is used to round the corners of an element outer border edge. */
+    border-top-right-radius: 50px; 
+}
+
+.circle{
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+/* Padding : It is used to generate space around an elements content , inside of any defined border. CSS Properties for specifying the padding for each side of an element such as padding-top,padding-right,padding-bottom and padding-left. */
+button{
+    background-color: burlywood;
+    border: 2px solid black;
+    padding: 5px; /* padding-top , padding-bottom , padding-right & padding-left 5px */
+    padding: 5px 10px; /* padding-top & padding-bottom=>5px , padding-right & padding-left=>10px */
+    padding: 5px 10px 15px; /* padding-top=>5px , padding-right & padding-left=>10px , padding-bottom=>15px */
+    padding: 5px 10px 15px 20px; /* padding-top=>5px , padding-right=>10px , padding-bottom=>15px , padding-left=>20px */   
+    
+    /* Margin : It is used to generate space around an elements , outside of any defined border. CSS Properties for specifying the margin for each side of an element such as margin-top,margin-right,margin-bottom and margin-left. */
+    margin: 5px; /* margin-top , margin-bottom , margin-right & margin-left 5px */
+    margin: 5px 10px; /* margin-top & margin-bottom=>5px , margin-right & margin-left=>10px */
+    margin: 5px 10px 15px; /* margin-top=>5px , margin-right & margin-left=>10px , margin-bottom=>15px */
+    margin: 5px 10px 15px 20px; /* margin-top=>5px , margin-right=>10px , margin-bottom=>15px , margin-left=>20px */
+}
+
+/* Display : It sets whether an element is treated as block or inline element and layout is used fot its childer. */
+span{
+    display:block; /* Display an element as block element(like <p>).It starts from new line and takes up the whole width. */
+}
+
+p{
+    border: 2px solid black;
+    display: inline; /* Display an element as inline element(like <soan>). Disadd: Do not accept width and height properties ,to over this use display:inline-block property.  */
+    width:500px;
+    height: 500px;
+}
+
+.inbl{
+    margin-top: 20px;
+    border:2px solid block ;
+    width:200px;
+    height: 200px;
+    display: inline-block; /* Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values */
+    border: none;
+    background-color: yellowgreen;
+    border-radius: 0px;
+}
+
+.hide{
+    display: none; /* The element is completely removed */
+}
