@@ -1,0 +1,76 @@
+section{
+    margin-top: 100px;
+}
+
+div{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px auto;
+}
+
+div:nth-of-type(2n){
+    background-color: #f7db6a;
+}
+
+div:nth-of-type(3n){
+    background-color: #ebb02d;
+}
+
+
+/* Transform : This Property lets you rotate,scale,skew or translate an element. */
+
+#one{
+    /* The rotate() method rotates an element clockwise or counter-clockwise according to a given degree. */
+    transform: rotate(45deg);
+}
+
+#two{
+    /* The scale() CSS function defines a transformation that resizes an element on the 2D plane */
+    /* transform: scaleX(2); scaleX by 2 */
+    /* transform: scaleY(3); scaleY by 3 */
+    /* transform: scale(0.5); scaleX and scaleY by 0.5 */
+    transform: scale(0.5,2); /* scaleX by 0.5 and scaleY by 2 */
+}
+
+#three{
+    /* The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis). */
+    /* transform: translateX(100px); translateX by 100px */
+    /* transform: translateY(200px); translateY by 200px */
+    /* transform: translate(100px); translateX and translateY by 100px */
+    transform: translate(100px,200px); /* translateX by 100px and translateY by 200px */
+}
+
+#four{
+    /* The skew() method skews an element along the X and Y-axis by the given angles. */
+    /* transform: skewX(30deg); skewX by 30deg */
+    /* transform: skewY(30deg); skewY by 30deg */
+    /* transform: skewX(-30deg); skewX by -30deg */
+    /* transform: skew(30deg); skewX and skewY by 30deg */
+    transform: skew(30deg,35deg); /* skewX by 30deg and skewY by 35deg */
+}
+
+#five{
+    transform: rotate(30deg) translateX(150px);
+}
+
+#box{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    margin-top: 100px;
+    border: none;
+    box-shadow: 2px 2px 10px black; /* Box Shadow : It adds shadow effects around an elements frame. box-shadow: Xoffset Yoffset blurRadius  colors */
+}
+
+#img{
+    width:400px;
+    height: 200px;
+    background-color: #7aa874;
+    margin: 10px auto;
+    background-image: url(Tree.jpg); /* Lets you set an image as a background. */
+    background-size: cover; /* background-size : contain (it will repeat) / cover (it will crop) / auto (it will stretch i.e displayed in its original size) */
+}
