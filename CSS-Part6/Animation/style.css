@@ -1,0 +1,74 @@
+/* CSS ANIMATION: An animation lets an element gradually change from one style to another.To use CSS animation, you must first specify some keyframes for the animation. */
+
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    /* Animation3 Apply */
+    animation-name: widthBgAnimate; /* Specifies the name of the @keyframes animation */
+    animation-duration: 2s; /* Specifies how long time an animation should take to complete one cycle */
+    animation-timing-function: ease-in; /* Specifies the speed curve of the animation */
+    animation-delay:0s; /* Specifies a delay for the start of an animation */
+    animation-iteration-count: infinite; /* Specifies the number of times an animation should be played */
+    animation-direction: alternate; /* Specifies whether an animation should be played forwards, backwards or in alternate cycles */
+
+    animation: widthBgAnimate 2s ease-in 0s infinite alternate ; /* Animation Shorthand */
+}
+
+/* @keyframes : When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.To get an animation to work, you must bind the animation to an element. */
+
+/* Animation1 */
+@keyframes fontAnimation{
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+
+/* Animation2 */
+@keyframes colorAnimate{
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+    }
+}
+
+/* Animation3 */
+@keyframes widthBgAnimate{
+    from{
+        width:10px;
+        background-color: green;
+    }
+    to{
+        width:900px;
+        background-color: blue;
+        border-radius: 15px;
+    }
+}
+
+.box2{
+    height: 100px;
+    width: 300px;
+    /* Animation4 Apply */
+    animation: BgColAnimate 6s ease-in 1s infinite normal ;
+}
+
+/* Animation4 */
+@keyframes BgColAnimate {
+    0%{
+        background-color: green;
+    }
+    50%{
+        background-color: yellow;
+    }
+    80%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    }
+}

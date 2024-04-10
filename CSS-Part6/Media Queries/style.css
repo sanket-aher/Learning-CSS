@@ -1,0 +1,43 @@
+h1{
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+/* Media Queries : Help to create a responsove websites.Media queries allow you to apply CSS styles depending on a device's media features(such as width,min-width,max-width,orientation(landscape/portrait)) ) */
+
+@media (width:400px){  /* Width of the viewport 400px */
+    h1{
+        background-color: red;
+    }
+    div{
+        width:100px;
+        height: 100px;
+        background-color: blue;
+    }
+}
+
+@media (min-width:700px){ /* Minimum width of the viewport 700px */
+    h1{
+        background-color: greenyellow;
+    }
+}
+
+@media (max-width:200px){ /* Maximum width of the viewport 200px */
+    h1{
+        background-color: pink;
+    }
+}
+
+@media (min-width:200px) and (max-width:300px){ /* Ranges between 200px to 300px  */
+    h1{
+        background-color: magenta;
+    }
+}
+
+/* 1)Bydefault orientation of laptop/computer is landscape 2)Bydefault orientation of mobile is portrait   */
+/* @media (orientation:landscape){ 
+    h1{
+        background-color: aqua;
+        color: brown;
+    }
+} */

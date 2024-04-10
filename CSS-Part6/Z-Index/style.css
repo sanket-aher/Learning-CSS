@@ -1,0 +1,18 @@
+.box{
+    height: 150px;
+    width:100px;
+    border: 2px solid black;
+    background-color: blue;
+}
+
+.one{
+    background-color: aquamarine;
+    z-index: 1; /* It decides the stack level of elements.Overlapping elements with a larger z-index cover those with a smaller one. Rule : 1)Bydefault of all element z-index is 0. 2)For applying z-index we must apply position:relative or position:absolute for that element. */
+    position: relative; /* For applying z-index we must write position:relative or position:absolute. */
+}
+
+.two{
+    background-color: darksalmon;
+    position: relative;
+    bottom: 50px;
+}
