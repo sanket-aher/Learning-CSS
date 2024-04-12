@@ -1,6 +1,6 @@
 # CSS Part 5: Advanced Topics and Techniques
 
-Welcome to the CSS Part 5 repository! This repository is dedicated to exploring advanced CSS topics and techniques to enhance your web development skills. To facilitate better understanding, we've divided this repository into multiple folders, each focusing on a specific topic.
+Welcome to the CSS Part 6 repository! This repository is dedicated to exploring advanced CSS topics and techniques to enhance your web development skills. To facilitate better understanding, we've divided this repository into multiple folders, each focusing on a specific topic.
 
 ## Topics Covered
 
@@ -31,7 +31,7 @@ Master the z-index property in CSS for controlling the stacking order of element
 
 ## Getting Started
 
-To begin exploring CSS Part 5, navigate to the respective folders above. Each folder contains examples and explanations to help you understand and apply the concepts covered in this repository.
+To begin exploring CSS Part 6, navigate to the respective folders above. Each folder contains examples and explanations to help you understand and apply the concepts covered in this repository.
 
 Let's dive into advanced CSS topics and techniques to create stunning and responsive web designs!
 
