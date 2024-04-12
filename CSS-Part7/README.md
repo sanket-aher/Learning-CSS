@@ -3,6 +3,7 @@
 Welcome to the Mini Project section of the CSS-Part7 repository! In this mini project, we explore creating a Sliderbar Menu using HTML and CSS, featuring a sleek and intuitive layout.
 
 ## Project Overview
+[Link](https://github.com/sanket-aher/Learning-CSS/tree/main/CSS-Part7/Sidebar-Menu(MiniProject))
 
 The Sliderbar Menu is a user-friendly navigation component designed to enhance the user experience on web pages. Utilizing HTML for structure and CSS for styling, this project aims to create a visually appealing and functional menu system.
 
