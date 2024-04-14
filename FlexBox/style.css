@@ -1,0 +1,271 @@
+/*-- Flex Container Parent Properties : 1)flex-direction(row,column,row-reverse,column-reverse),2)flex-wrap(wrap,nowrap,wrap-reverse),3)flex-flow(It is comination of flex-direction and flex-wrap properties),4)justify-content(space-around,space-evenly,space-between,flex-start,flex-end,center),5)align-items(stretch,flex-start,flex-end,center),6)align-content,7)gap/ --*/
+/*-- Flex Container Child Properties : 1)order,2)flex-grow,3)flex-shrink,4)flex-basis,5)flex(Combination of flex-grow,flex-shrink,flex-basis),6)align-self(flex-start,flex-end,stretch,center) --*/
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* Example1 : flex-direction Properties: row(byfault),column,row-reverse,column-reverse */
+h2{
+    text-align: center;
+}
+
+.ex1container{
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+     flex-direction: row; /* It is bydefault Property of flex is flex-direction:row.It is align rowwise*/
+     /* flex-direction: column;  Using flex-direction:column it is align columnwise */
+     /*flex-direction: row-reverse; Using flex-direction:row-reverse it is align rowwise but in reverse order */
+     /*flex-direction: column-reverse; Using flex-direction:column-reverse it is align columnwise but in reverse order */
+}
+
+
+.ex1box{
+    border: 2px solid green;
+    margin: 10px 0;
+}
+
+
+/* Example2 : 1)flex-wrap Properties: nowrap(bydefault),wrap,wrap-reverse
+              2)gap Properties: gap,row-gap,column-gap. */
+.ex2container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    /*flex-wrap: nowrap;Using flex-wrap:nowrap It is bydefault property,the child element should be not be wrap in next rows.*/
+    flex-wrap:wrap;/*Using flex-wrap:wrap the child element should be wrap in next rows depending upon shrink and so on*/
+    /*flex-wrap:wrap-reverse;Using flex-wrap:wrap-reverse the child element should be wrap in next rows depending upon shrink but in reverse order and so on*/
+
+
+   gap:10px;/*  Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+ 
+
+}
+
+
+.ex2box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+
+
+/* Example3 : flex-flow Syntax: flex-direction flex-wrap  */
+              .ex3container{
+                /*Note : To see the effect shrink the mobile views option in inspect*/
+                margin: 5px;
+                height:400px;
+                border:2px solid red;
+                display:flex ;/* Using display:flex; the children is in inline position*/
+                gap:10px;
+        
+                /*flex-flow:row wrap;/* It is comination of flex-direction and flex-wrap properties.Here flex-direction:row &flex-wrap:wrap. */ 
+                flex-flow:row-reverse wrap;/* It is comination of flex-direction and flex-wrap properties.Here  flex-direction:row-reverse & flex-wrap:wrap. */
+            
+            }
+
+            .ex3box{
+                border: 2px solid green;
+                width: 50px;
+            }
+
+/* Example4 : justify-content Properties: space-around,space-evenly,space-between,flex-start(bydefault),flex-end,center.The justify-content is used for main axis(X-axis or widthwise), it will used for rowwise alignment. */
+.ex4container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap;
+
+     justify-content: center;/*Using justify-content:center all the child elements position at center of the container widthwise*/
+   /*justify-content: space-around; Using justify-content: space-around equal space between all the childs elements and covers all the width of .ex4container lly to justify-content:space-evenly; property but minor difference you can uncomment and check once */
+   /*justify-content: space-evenly; Using justify-content: space-evenly equal space between all the childs elements and covers all the width of .ex4container lly to justify-content:space-around; property but minor difference you can uncomment and check once*/
+   /*justify-content: space-between; Using justify-content: space-between equal space between all the childs elements but not given space between start position of first element and end position of last child element and covers all the width of .ex4container */
+   /*justify-content: flex-start; Using justify-content: flex-start it is bydefault property.All the child elements position at start of the container widthwise*/
+   /*justify-content: flex-end; Using justify-content: flex-end all the child elements position at end of the container widthwise*/
+
+   
+
+}
+
+.ex4box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+
+
+
+/* Example5 : 1)align-items Properties: stretch(bydefault),flex-start,flex-end,center.The align-item is used for cross axis(Y-axis or heightwise), it will used for also rowwise alignment.
+2)align-content Properties: space-around(bydefault),space-between,flex-start,flex-end,stretch,center. This properties is used to give how much space between 'wrapped child elements' */
+.ex5container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap;
+
+    align-items:center;/* Using align-items:center all the child elements position at center of the container heightwise */
+   /* align-items:stretch ; Using align-items:stretch it is bydefault property and the child elements takes all the height automatically accordinglly parents container class=ex5container */ 
+   /*align-items: flex-start;  Using align-items: flex-start all the child elements position at start of the container heightwise*/
+   /*align-items: flex-end; Using align-items: flex-end all the child elements position at end of the container heightwise*/
+
+   
+   /*align-content: flex-start; Using align-content:flex-start all the child elements position at start of the container heightwise and also wrapping chlid element position at start */
+   /*align-content: flex-end; Using align-content:flex-end all the child elements position at end of the container heightwise and also wrapping child element position at end */
+   align-content: center;/* Using align-content:center all the child elements position at center of the container heightwise and also wrapping child element position at center */
+   /*align-content: stretch;/* Using align-content:stretch all the child elements takes all the height automatically accordinglly parents container class=ex5container */
+   /*align-content: space-around;/* Using align-content:space-around it is bydefault property and equal space between all the childs wrapping elements  */
+   /*align-content: space-between;/* Using align-content:space-between equal space between all the wrapping childs elements but not given space between start position of first element and end position of last child element */
+}
+
+.ex5box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+
+
+
+/* Example 6:order */
+
+.ex6container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap;
+    align-items: center;
+
+}
+
+.ex6container .ex6box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+.ex6container #box-1 {
+    order: 1;/* Order : Bydefault order of all child element is 0.If id=box-1 order is 1 i.e higher priority order going end of all the child elemnts and so on */
+}
+
+.ex6container #box-3 {
+    order: 2;
+}
+
+
+
+
+
+
+/* Example 7:flex-grow */
+.ex7container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap;
+    align-items: center;
+
+}
+
+.ex7container .ex7box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+.ex7container #box-1 {
+   
+    flex-grow: 1;/* flex-grow : Bydefault flex-grow of all child element is 0.If id=box-1 makes flex-grow=1 i.e higher priority grow it will grow greateraly compare to original child elements and use all the width of the parent class .ex6container */
+
+}
+
+.ex7container #box-5 {
+    flex-grow: 2;
+}
+
+
+/* Example 8:flex-shrink and flex-basis */
+.ex8container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row ;
+    align-items: center;
+}
+
+.ex8container .ex8box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+.ex8container #box-3 {
+    flex-shrink: 2;/* flex-shrink: Bydefault flex-shrink of all child element is 1.If id=box-3 make flex-shrink=2 it will faster shrink as compare to all orginal child elements. */
+}
+
+.ex8container #box-4{
+ flex-basis: 200px;/* flex-basis defines the only the width of id=box-4  */
+ flex-shrink:12;   
+}
+
+
+/* Example 9: Syntax flex: flex-grow flex-shrink flex-basis   */
+.ex9container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap ;
+    align-items: center;
+}
+
+.ex9container .ex9box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+.ex9container #box-3 {
+    flex:0 1 100px;  /*Syntax flex: flex-grow flex-shrink flex-basis*/
+}
+
+
+
+/* Example 10: align-self Properties: flex-start,flex-end,stretch,center.These properties is use on cross axis(Y-axis or heightwise) to set the child element at start,end,stretch or center position  */
+.ex10container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    margin: 5px;
+    height:400px;
+    border:2px solid red;
+    display:flex ;/* Using display:flex; the children is in inline position*/
+    gap:10px;
+    flex-flow:row wrap ;
+    align-items: center;
+}
+
+.ex10container .ex10box{
+    border: 2px solid green;
+    width: 50px;
+}
+
+.ex10container #box-3 {
+    align-self:flex-start;
+}

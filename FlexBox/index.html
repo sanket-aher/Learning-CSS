@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+        <!-- 1)Flex Container Parent Properties : 1)flex-direction(row,column,row-reverse,column-reverse),2)flex-wrap(wrap,nowrap,wrap-reverse),3)flex-flow(It is comination of flex-direction and flex-wrap properties),4)justify-content(space-around,space-between,space-evenly,flex-start,flex-end,center),5)align-items(stretch,flex-start,flex-end,center),6)align-content,7)gap
+             2)Flex Container Child Properties : 1)order,2)flex-grow,3)flex-shrink,4)flex-basis,5)flex(Combination of flex-grow,flex-shrink,flex-basis),6)align-self(flex-start,flex-end,stretch,center) -->
+         
+
+    <!--Example1 : flex-direction Properties: row(bydefault),column,row-reverse,column-reverse-->
+    <h2>Example1 flex-direction</h2>
+    <div class="ex1container">
+      <div class="ex1box">Box-1</div>
+      <div class="ex1box">Box-2</div>
+      <div class="ex1box">Box-3</div>
+      <div class="ex1box">Box-4</div>
+      <div class="ex1box">Box-5</div>
+      <div class="ex1box">Box-6</div>
+      <div class="ex1box">Box-7</div>
+      <div class="ex1box">Box-8</div>
+    </div>
+    <hr />
+
+    <!--Example2 : 1)flex-wrap Properties: nowrap(bydefault),wrap,wrap-reverse.
+                   2)gap Properties: gap,row-gap,column-gap.-->
+    <h2>
+      Example2 flex-wrap & Gap: To see the effect shrink the mobile views option
+      in inspect
+    </h2>
+    <div class="ex2container">
+      <div class="ex2box">Box-1</div>
+      <div class="ex2box">Box-2</div>
+      <div class="ex2box">Box-3</div>
+      <div class="ex2box">Box-4</div>
+      <div class="ex2box">Box-5</div>
+      <div class="ex2box">Box-6</div>
+      <div class="ex2box">Box-7</div>
+      <div class="ex2box">Box-8</div>
+    </div>
+    <hr />
+
+    <!--Example3 : flex-flow Syntax: flex-direction flex-wrap-->
+    <h2>
+      Example3 flex-flow: To see the effect shrink the mobile views option in
+      inspect
+    </h2>
+    <div class="ex3container">
+      <div class="ex3box">Box-1</div>
+      <div class="ex3box">Box-2</div>
+      <div class="ex3box">Box-3</div>
+      <div class="ex3box">Box-4</div>
+      <div class="ex3box">Box-5</div>
+      <div class="ex3box">Box-6</div>
+      <div class="ex3box">Box-7</div>
+      <div class="ex3box">Box-8</div>
+    </div>
+    <hr />
+
+
+    <!--Example4 : justify-content Properties: space-around,space-evenly,space-between,flex-start(bydefault),flex-end,center.The justify-content is used for main axis(X-axis or widthwise), it will used for rowwise alignment.-->
+    <h2>
+        Example4 justify-content: To see the effect shrink the mobile views option in
+        inspect
+      </h2>
+      <div class="ex4container">
+        <div class="ex4box">Box-1</div>
+        <div class="ex4box">Box-2</div>
+        <div class="ex4box">Box-3</div>
+        <div class="ex4box">Box-4</div>
+        <div class="ex4box">Box-5</div>
+        <div class="ex4box">Box-6</div>
+        <div class="ex4box">Box-7</div>
+        <div class="ex4box">Box-8</div>
+      </div>
+      <hr />
+
+
+
+      <!--Example5 : 1)align-items Properties: stretch(bydefault),flex-start,flex-end,center.The align-item is used for cross axis(Y-axis or heightwise), it will used for rowwise alignment.
+                     2)align-content Properties: space-around(bydefault),space-between,flex-start,flex-end,stretch,center. This properties is used to give how much space between 'wrapped child elements' -->
+    <h2>
+        Example5 align-items & align-content: To see the effect shrink the mobile views option in inspect
+    </h2>
+      <div class="ex5container">
+        <div class="ex5box">Box-1</div>
+        <div class="ex5box">Box-2</div>
+        <div class="ex5box">Box-3</div>
+        <div class="ex5box">Box-4</div>
+        <div class="ex5box">Box-5</div>
+        <div class="ex5box">Box-6</div>
+        <div class="ex5box">Box-7</div>
+        <div class="ex5box">Box-8</div>
+      </div>
+      <hr />
+
+
+    <h2>
+        Example6: order
+    </h2>
+    <div class="ex6container">
+      <div class="ex6box" id="box-1">box-1</div>
+      <div class="ex6box" id="box-2">box-2</div>
+      <div class="ex6box" id="box-3">box-3</div>
+      <div class="ex6box" id="box-4">box-4</div>
+      <div class="ex6box" id="box-5">box-5</div>
+      <div class="ex6box" id="box-6">box-6</div>
+      <div class="ex6box" id="box-7">box-7</div>
+      <div class="ex6box" id="box-8">box-8</div>
+    </div>
+
+
+    <h2>
+      Example7: flex-grow: To see the effect shrink the mobile views option in inspect
+  </h2>
+  <div class="ex7container">
+    <div class="ex7box" id="box-1">box-1</div>
+    <div class="ex7box" id="box-2">box-2</div>
+    <div class="ex7box" id="box-3">box-3</div>
+    <div class="ex7box" id="box-4">box-4</div>
+    <div class="ex7box" id="box-5">box-5</div>
+    <div class="ex7box" id="box-6">box-6</div>
+    <div class="ex7box" id="box-7">box-7</div>
+    <div class="ex7box" id="box-8">box-8</div>
+  </div>
+
+
+  <h2>
+    Example8: flex-shrink & flex-basis: To see the effect shrink the mobile views option in inspect
+</h2>
+<div class="ex8container">
+  <div class="ex8box" id="box-1">box-1</div>
+  <div class="ex8box" id="box-2">box-2</div>
+  <div class="ex8box" id="box-3">box-3</div>
+  <div class="ex8box" id="box-4">box-4</div>
+  <div class="ex8box" id="box-5">box-5</div>
+  <div class="ex8box" id="box-6">box-6</div>
+  <div class="ex8box" id="box-7">box-7</div>
+  <div class="ex8box" id="box-8">box-8</div>
+</div>
+
+
+
+<h2>
+  Example9: Syntax (flex: flex-grow flex-shrink flex-basis) To see the effect shrink the mobile views option in inspect
+</h2>
+<div class="ex9container">
+<div class="ex9box" id="box-1">box-1</div>
+<div class="ex9box" id="box-2">box-2</div>
+<div class="ex9box" id="box-3">box-3</div>
+<div class="ex9box" id="box-4">box-4</div>
+<div class="ex9box" id="box-5">box-5</div>
+<div class="ex9box" id="box-6">box-6</div>
+<div class="ex9box" id="box-7">box-7</div>
+<div class="ex9box" id="box-8">box-8</div>
+</div>
+
+
+
+<h2>
+  Example10: align-self : To see the effect shrink the mobile views option in inspect
+</h2>
+<div class="ex10container">
+<div class="ex10box" id="box-1">box-1</div>
+<div class="ex10box" id="box-2">box-2</div>
+<div class="ex10box" id="box-3">box-3</div>
+<div class="ex10box" id="box-4">box-4</div>
+<div class="ex10box" id="box-5">box-5</div>
+<div class="ex10box" id="box-6">box-6</div>
+<div class="ex10box" id="box-7">box-7</div>
+<div class="ex10box" id="box-8">box-8</div>
+</div>
+
+
+  </body>
+</html>
