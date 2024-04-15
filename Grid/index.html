@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1)Grid Container Parent Properties: 1)gap,2)grid-template-columns,3)grid-template-rows,4)grid-auto-rows,5)justify-content(space-around,space-between,space-evenly,flex-start/start,flex-end/end,center),6)align-content(center,flex-start,flex-end,stretch(bydefault),space-around,space-between),7)align-items(flex-start,flex-end,stretch(bydefault),center) 
+         2)Grid Container Child Properties:  1)justify-self(stretch(bydefault),flex-start/start,flex-end/end,center),2)align-self(stretch(bydefault),flex-start,flex-end,center),3)grid-column(combination of grid-column-start & grid-column-end),4)grid-row(combination of grid-row-start & grid-row-end),5)grid-area(combination of grid-column & grid-row)  -->
+
+    <!-- Example 1: 1)grid-template-columns Properties:This property specifies the number and the widths of columns in a grid layout.The values are a space separated list, where each value specifies the size of the respective column. 
+                    2)gap Properties: gap,row-gap,column-gap. -->
+    <h2>Example1 :grid-template-columns & gap</h2>
+    <div class="ex1container">
+        <div class="ex1box" id="ex1box-1">box-1</div>
+        <div class="ex1box" id="ex1box-2">box-2</div>
+        <div class="ex1box" id="ex1box-3">box-3</div>
+        <div class="ex1box" id="ex1box-4">box-4</div>
+        <div class="ex1box" id="ex1box-5">box-5</div>
+        <div class="ex1box" id="ex1box-6">box-6</div>
+        <div class="ex1box" id="ex1box-7">box-7</div>
+        <div class="ex1box" id="ex1box-8">box-8</div>
+        <div class="ex1box" id="ex1box-9">box-9</div>
+        <div class="ex1box" id="ex1box-10">box-10</div>
+    </div><br>   
+    <hr><br>
+
+
+    <!-- Example 2: 1)grid-template-rows Properties:This property specifies the number and the height of rows in a grid layout.The values are a space separated list, where each value specifies the height of the respective rows.
+                    2)grid-auto-rows:i)This property define all the remaining rows height if not mentioned in grid-template-rows property OR ii)to set the equal height of all the rows than not use grid-template-rows property in this case.
+                    3)gap Properties: gap,row-gap,column-gap. -->
+    <h2>Example2 :grid-template-rows & gap</h2>
+    <div class="ex2container">
+        <div class="ex2box" id="ex2box-1">box-1</div>
+        <div class="ex2box" id="ex2box-2">box-2</div>
+        <div class="ex2box" id="ex2box-3">box-3</div>
+        <div class="ex2box" id="ex2box-4">box-4</div>
+        <div class="ex2box" id="ex2box-5">box-5</div>
+        <div class="ex2box" id="ex2box-6">box-6</div>
+        <div class="ex2box" id="ex2box-7">box-7</div>
+        <div class="ex2box" id="ex2box-8">box-8</div>
+        <div class="ex2box" id="ex2box-9">box-9</div>
+        <div class="ex2box" id="ex2box-10">box-10</div>
+    </div><br> 
+    <hr><br>  
+    
+    <!-- Example 3: justify-content Properties: space-around,space-between,space-evenly,flex-start/start(bydefault),flex-end/end,center.The justify-content is used for main axis(X-axis or widthwise), it will used for rowwise alignment.   -->
+    <h2>Example3 :justify-content</h2>
+    <div class="ex3container">
+        <div class="ex3box" id="ex3box-1">box-1</div>
+        <div class="ex3box" id="ex3box-2">box-2</div>
+        <div class="ex3box" id="ex3box-3">box-3</div>
+        <div class="ex3box" id="ex3box-4">box-4</div>
+        <div class="ex3box" id="ex3box-5">box-5</div>
+        <div class="ex3box" id="ex3box-6">box-6</div>
+        <div class="ex3box" id="ex3box-7">box-7</div>
+        <div class="ex3box" id="ex3box-8">box-8</div>
+        <div class="ex3box" id="ex3box-9">box-9</div>
+        <div class="ex3box" id="ex3box-10">box-10</div>
+    </div><br> 
+    <hr><br>  
+
+    <!-- Example 4: align-content Properties: center,flex-start,flex-end,stretch(bydefault),space-around,space-between.The align-content is used for cross axis(Y-axis or heightwise), it will used for also rowwise alignment to see the effect use inspect and check once difference between align-items & align-content    -->
+    <h2>Example4 :align-content</h2>
+    <div class="ex4container">
+        <div class="ex4box" id="ex4box-1">box-1</div>
+        <div class="ex4box" id="ex4box-2">box-2</div>
+        <div class="ex4box" id="ex4box-3">box-3</div>
+        <div class="ex4box" id="ex4box-4">box-4</div>
+        <div class="ex4box" id="ex4box-5">box-5</div>
+        <div class="ex4box" id="ex4box-6">box-6</div>
+        <div class="ex4box" id="ex4box-7">box-7</div>
+        <div class="ex4box" id="ex4box-8">box-8</div>
+        <div class="ex4box" id="ex4box-9">box-9</div>
+        <div class="ex4box" id="ex4box-10">box-10</div>
+    </div><br> 
+    <hr><br>  
+
+    <!-- Example 5: align-items Properties: flex-start,flex-end,stretch(bydefault),center.The align-item is used for cross axis(Y-axis or heightwise), it will used for also rowwise alignment to see the effect use inspect and check once difference between align-items & align-content.    -->
+    <h2>Example5 :align-items</h2>
+    <div class="ex5container">
+        <div class="ex5box" id="ex5box-1">box-1</div>
+        <div class="ex5box" id="ex5box-2">box-2</div>
+        <div class="ex5box" id="ex5box-3">box-3</div>
+        <div class="ex5box" id="ex5box-4">box-4</div>
+        <div class="ex5box" id="ex5box-5">box-5</div>
+        <div class="ex5box" id="ex5box-6">box-6</div>
+        <div class="ex5box" id="ex5box-7">box-7</div>
+        <div class="ex5box" id="ex5box-8">box-8</div>
+        <div class="ex5box" id="ex5box-9">box-9</div>
+        <div class="ex5box" id="ex5box-10">box-10</div>
+    </div><br> 
+    <hr><br> 
+    
+    <!-- Example 6: 1)justify-self Properties:It is used around main axis(X-axis or widthwise).Its properties are flex-start/start(position at start around X-axis),flex-end/end(position at end around X-axis),center(position at center around X-axis),stretch(bydefault property,it use full width around X-axis).
+                    2)align-self Properties:It is used around cross axis(Y-axis or heightwise).Its properties are flex-start(position at start around Y-axis),flex-end(position at end around Y-axis),center(position at center around Y-axis),stretch(bydefault property,it use full width around Y-axis)    -->
+    <h2>Example6 :justify-self & align-self</h2>
+    <div class="ex6container">
+        <div class="ex6box" id="ex6box-1">box-1</div>
+        <div class="ex6box" id="ex6box-2">box-2</div>
+        <div class="ex6box" id="ex6box-3">box-3</div>
+        <div class="ex6box" id="ex6box-4">box-4</div>
+        <div class="ex6box" id="ex6box-5">box-5</div>
+        <div class="ex6box" id="ex6box-6">box-6</div>
+        <div class="ex6box" id="ex6box-7">box-7</div>
+        <div class="ex6box" id="ex6box-8">box-8</div>
+        <div class="ex6box" id="ex6box-9">box-9</div>
+        <div class="ex6box" id="ex6box-10">box-10</div>
+    </div><br> 
+    <hr><br> 
+
+    <!-- Example 7: grid-column Properties syntax: grid-column-start/grid-column-end.It specifies a grid item's size and location in a grid layout columnwise from where to start and where to end widthwise.To see the numbering go to inspect and click on grid.    -->
+    <h2>Example7 :grid-column(Comibination of grid-column-start & grid-column-end)</h2>
+    <div class="ex7container">
+        <div class="ex7box" id="ex7box-1">box-1</div>
+        <div class="ex7box" id="ex7box-2">box-2</div>
+        <div class="ex7box" id="ex7box-3">box-3</div>
+        <div class="ex7box" id="ex7box-4">box-4</div>
+        <div class="ex7box" id="ex7box-5">box-5</div>
+        <div class="ex7box" id="ex7box-6">box-6</div>
+        <div class="ex7box" id="ex7box-7">box-7</div>
+        <div class="ex7box" id="ex7box-8">box-8</div>
+        <div class="ex7box" id="ex7box-9">box-9</div>
+        <div class="ex7box" id="ex7box-10">box-10</div>
+    </div><br> 
+    <hr><br> 
+
+    <!-- Example 8: grid-row Properties syntax: grid-row-start/grid-row-end.It specifies a grid item's size and location in a grid layout rowwise from where to start and where to end heightwise.To see the numbering go to inspect and click on grid.    -->
+    <h2>Example8 :grid-row(Comibination of grid-row-start & grid-row-end)</h2>
+    <div class="ex8container">
+        <div class="ex8box" id="ex8box-1">box-1</div>
+        <div class="ex8box" id="ex8box-2">box-2</div>
+        <div class="ex8box" id="ex8box-3">box-3</div>
+        <div class="ex8box" id="ex8box-4">box-4</div>
+        <div class="ex8box" id="ex8box-5">box-5</div>
+        <div class="ex8box" id="ex8box-6">box-6</div>
+        <div class="ex8box" id="ex8box-7">box-7</div>
+        <div class="ex8box" id="ex8box-8">box-8</div>
+        <div class="ex8box" id="ex8box-9">box-9</div>
+        <div class="ex8box" id="ex8box-10">box-10</div>
+    </div><br> 
+    <hr><br> 
+
+    <!-- Example 9: grid-area(Comibination of grid-column & grid-row) Properties syntax: grid-row-start/grid-column-start/grid-row-end/grid-column-end.It specifies a grid item's size and location in a grid layout rowwise & columnwise from where to start and where to end heightwise & widthwise.To see the numbering go to inspect and click on grid. -->
+    <h2>Example9 :grid-area(Comibination of grid-column & grid-row. Syntax:grid-row-start/grid-column-start/grid-row-end/grid-column-end)</h2>
+    <div class="ex9container">
+        <div class="ex9box" id="ex9box-1">box-1</div>
+        <div class="ex9box" id="ex9box-2">box-2</div>
+        <div class="ex9box" id="ex9box-3">box-3</div>
+        <div class="ex9box" id="ex9box-4">box-4</div>
+        <div class="ex9box" id="ex9box-5">box-5</div>
+        <div class="ex9box" id="ex9box-6">box-6</div>
+        <div class="ex9box" id="ex9box-7">box-7</div>
+        <div class="ex9box" id="ex9box-8">box-8</div>
+        <div class="ex9box" id="ex9box-9">box-9</div>
+        <div class="ex9box" id="ex9box-10">box-10</div>
+    </div><br> 
+    <hr><br>
+    
+    <!-- Example 10: grid-template-areas:You can "name" grid items by using the grid-area property, and then reference to the "name" in the grid-template-areas property. -->
+    <h2>Example10 Layout1: Using grid-template-areas</h2>
+    <div class="ex10container">
+        <div class="ex10box" id="ex10box-1">box-1</div>
+        <div class="ex10box" id="ex10box-2">box-2</div>
+        <div class="ex10box" id="ex10box-3">box-3</div>
+        <div class="ex10box" id="ex10box-4">box-4</div>
+    </div><br> 
+    <hr><br>
+
+    <!-- Example 11 -->
+    <h2>Example11 Layout2</h2>
+    <div class="ex11container">
+        <div class="ex11box" id="ex11box-1">box-1</div>
+        <div class="ex11box" id="ex11box-2">box-2</div>
+        <div class="ex11box" id="ex11box-3">box-3</div>
+        <div class="ex11box" id="ex11box-4">box-4</div>
+        <div class="ex11box" id="ex11box-5">box-5</div>
+        <div class="ex11box" id="ex11box-6">box-6</div>
+        <div class="ex11box" id="ex11box-7">box-7</div>
+        <div class="ex11box" id="ex11box-8">box-8</div>
+    </div><br> 
+    <hr><br>
+
+
+
+</body>
+</html>

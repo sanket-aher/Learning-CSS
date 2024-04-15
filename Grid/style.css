@@ -1,0 +1,360 @@
+/* 1)Grid Container Parent Properties: 1)gap,2)grid-template-columns,3)grid-template-rows,4)grid-auto-rows,5)justify-content(space-around,space-between,space-evenly,flex-start/start,flex-end/end,center),6)align-content(center,flex-start,flex-end,stretch(bydefault),space-around,space-between),7)align-items(flex-start,flex-end,stretch(bydefault),center)
+   2)Grid Container Child Properties:  1)justify-self(stretch(bydefault),flex-start/start,flex-end/end,center),2)align-self(stretch(bydefault),flex-start,flex-end,center),3)grid-column(combination of grid-column-start & grid-column-end),4)grid-row(combination of grid-row-start & grid-row-end),5)grid-area(combination of grid-column & grid-row) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ /* Example 1: 1)grid-template-columns Properties:This property specifies the number and the widths of columns in a grid layout.The values are a space separated list, where each value specifies the size of the respective column. 
+               2)gap Properties: gap,row-gap,column-gap.  */
+.ex1container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    
+    grid-template-columns: 200px 300px 100px;/*  Using grid-template-columns: 200px 300px 100px; we have define 3columns with the width 200px,300px & 100px but using px it is not responsive*/
+    /*grid-template-columns: 30% 20% 20vw;  Using grid-template-columns: 30% 20% 20vw; we have define 3columns with the width 30%,20% & 20vw and using % & vw it is a responsive*/
+    /*grid-template-columns: 2fr 1fr 1fr 1fr;  Using grid-template-columns: 2fr 1fr 1fr 1fr; we have define 4columns with the width 2fr,1fr,1fr & 1fr it is use full width of parent accordingly divide the child width automatically and using fr it is a responsive */
+    /*grid-template-columns: 200px auto auto;  Using grid-template-columns: 200px auto auto; we have define 3columns with the width 200px,auto & auto ,the 200px is fixed but using auto the remaining 2 columns automatically divides equally depending upon parent. px is not responsive but auto is responsive */
+    /*grid-template-columns: repeat(4,100px);  Using grid-template-columns: repeat(4,100px); we have define 4columns with the width 100px but using px it is not responsive */
+    /*grid-template-columns: repeat(auto-fill,150px);  Using grid-template-columns: repeat(auto-fill,150px); we have define columns auto-fill depending upon the parent it takes full width but all the child element takes the width 150px  as we define but using px it is not responsive */
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex1box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+
+
+
+ /* Example 2: 1)grid-template-rows Properties:This property specifies the number and the height of rows in a grid layout.The values are a space separated list, where each value specifies the height of the respective rows.
+               2)grid-auto-rows:i)This property define all the remaining rows height if not mentioned in grid-template-rows property OR ii)to set the equal height of all the rows than not use grid-template-rows property in this case.
+               3)gap Properties: gap,row-gap,column-gap.  */
+.ex2container{
+    /*Note : To see the effect shrink the mobile views option in inspect*/
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 300px 100px;/*  Using grid-template-columns: 200px 300px 100px; we have define 3columns with the width 200px,300px & 100px but using px it is not responsive*/
+   
+    grid-template-rows: 300px 100px;/* Using grid-template-rows: 300px 100px; we have define rows height the first row height is 300px & second row height is 100px and all the remaining rows height set as default height to overcome this use grid-auto-rows property to set the remaining rows height but using px it is not responsive */
+    grid-auto-rows: 150px;/*  Using grid-auto-rows:150px; we have define the row height of all the remaining rows 150px but px is not responsive */    
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex2box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+
+
+ /* Example 3: justify-content Properties: space-around,space-between,space-evenly,flex-start/start(bydefault),flex-end/end,center.The justify-content is used for main axis(X-axis or widthwise), it will used for rowwise alignment.  */
+.ex3container{
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 300px 100px;/*  Using grid-template-columns: 200px 300px 100px; we have define 3columns with the width 200px,300px & 100px but using px it is not responsive*/
+    
+    justify-content: center;/*Using justify-content:center all the child elements position at center of the container widthwise*/
+    /*justify-content: space-around; Using justify-content: space-around equal space between all the childs elements and covers all the width of .ex3container lly to justify-content:space-evenly; property but minor difference you can uncomment and check once */
+    /*justify-content: space-evenly; Using justify-content: space-evenly equal space between all the childs elements and covers all the width of .ex3container lly to justify-content:space-around; property but minor difference you can uncomment and check once*/
+    /*justify-content: space-between; Using justify-content: space-between equal space between all the childs elements but not given space between start position of first element and end position of last child element and covers all the width of .ex3container */
+    /*justify-content: start; Using justify-content: flex-start/start it is bydefault property.All the child elements position at start of the container widthwise*/
+    /*justify-content: end; Using justify-content: flex-end/end all the child elements position at end of the container widthwise*/
+
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex3box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+
+/* Example 4: align-content Properties: center,flex-start,flex-end,stretch(bydefault),space-around,space-between.The align-content is used for cross axis(Y-axis or heightwise), it will used for also rowwise alignment to see the effect use inspect and check once difference between align-items & align-content */
+.ex4container{
+    /*Note : To see the effect use inspect option and click on grid and than go to layouts watch*/
+    height: 400px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px;/*  Using grid-template-columns: 200px 200px; we have define 2columns with the width 200px & 200px but using px it is not responsive*/
+
+    /* Inspect and see the difference between align-items & align-content */
+
+     align-content:center; /*Using align-content:center; all the child elements position at center of the container heightwise but all the child centered position at same time of the container */
+    /* align-content: flex-start;  Using align-content:flex-start; all the child elements position at start of the container heightwise but all the child start position at same time of the container */
+    /* align-content: flex-end; Using align-content:flex-end; all the child elements position at end of the container heightwise but all the child end position at same time of the container */
+    /* align-content: stretch; Using align-content:stretch; It is Bydefault property.All the child elements takes all the height automatically accordinglly parents container class=ex4container but all the child stretch at same time of the container  */
+    /* align-content: space-around; Using align-content:space-around; space-around equal space between all the childs elements and covers all the heightwise but all the child space-around position at same time of the container */
+    /* align-content: space-between; Using align-content:space-between; space-between equal space between all the childs elements and covers all the heightwise and not given space between start position of first element and end position of last child element but all the child space-between position at same time of the container */
+
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex4box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+
+/* Example 5: align-items Properties: flex-start,flex-end,stretch(bydefault),center.The align-item is used for cross axis(Y-axis or heightwise), it will used for also rowwise alignment to see the effect use inspect and check once difference between align-items & align-content. */
+.ex5container{
+    /*Note : To see the effect use inspect option and click on grid and than go to layouts watch*/
+    height: 400px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px;/*  Using grid-template-columns: 200px 200px; we have define 2columns with the width 200px & 200px but using px it is not responsive*/
+
+
+    /* Inspect and see the difference between align-items & align-content */
+
+     align-items: center;/*Using align-items:center; all the child elements position at center of the container heightwise but all the child centered position at same time of the container depending on specific child items  */
+    /* align-items: flex-end; align-items:flex-end; all the child elements position at end of the container heightwise but all the child end position at same time of the container depending on specific child items */
+    /* align-items: flex-start; align-items:flex-start; all the child elements position at start of the container heightwise but all the child start position at same time of the container depending on specific child items */
+    /*align-items: stretch;  align-items:stretch; It is Bydefault property.All the child elements takes all the height automatically accordinglly parents container class=ex5container but all the child stretch at same time of the container depending on specific child items */
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex5box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+
+/* Example 6:   1)justify-self Properties:It is used around main axis(X-axis or widthwise).Its properties are flex-start/start(position at start around X-axis),flex-end/end(position at end around X-axis),center(position at center around X-axis),stretch(bydefault property,it use full width around X-axis).
+                2)align-self Properties:It is used around cross axis(Y-axis or heightwise).Its properties are flex-start(position at start around Y-axis),flex-end(position at end around Y-axis),center(position at center around Y-axis),stretch(bydefault property,it use full width around Y-axis) */
+.ex6container{
+    
+    height: 600px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px;/*  Using grid-template-columns: 200px 200px; we have define 2columns with the width 200px & 200px but using px it is not responsive*/
+
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex6box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+#ex6box-1{
+    background-color: bisque;
+    justify-self: flex-end;/* It is used around main axis(X-axis or widthwise).Its properties are flex-start/start(position at start around X-axis),flex-end/end(position at end around X-axis),center(position at center around X-axis),stretch(bydefault property,it use full width around X-axis) */
+    align-self: flex-end;/* It is used around cross axis(Y-axis or heightwise).Its properties are flex-start(position at start around Y-axis),flex-end(position at end around Y-axis),center(position at center around Y-axis),stretch(bydefault property,it use full width around Y-axis) */
+    
+}
+
+/* Example 7: grid-column:grid-column-start/grid-column-end; It specifies a grid item's size and location in a grid layout columnwise from where to start and where to end widthwise.To see the numbering go to inspect and click on grid.  */
+.ex7container{
+
+    height: 600px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px 200px;/*  Using grid-template-columns: 200px 200px 200px; we have define 3columns with the width 200px,200px & 200px but using px it is not responsive*/
+
+
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex7box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+/* Testcase 1: Using simple values */
+#ex7box-1{
+    background-color: bisque;
+    /* grid-column-start: 1; Using grid-column-start Specifies on which column to start displaying the item widthwise.To see the numbering go to inspect and click on grid. */
+    /* grid-column-end: 3; Using grid-column-end Specifies on which column-line to stop displaying the item widthwise.To see the numbering go to inspect and click on grid. */
+    grid-column: 1/3; /* grid-column:grid-column-start/grid-column-end; */
+}
+
+/* Testcase 2: Using span */
+#ex7box-6{
+    background-color: bisque;
+    grid-column: 1/span 2; /* grid-column:grid-column-start/grid-column-end; Using grid-column-end:span 2; to take 2column width of the id #ex7box-6 */
+}
+
+/* Testcase 3: Negative values */
+#ex7box-8{
+    background-color: bisque;
+    grid-column: 1/-1; /* grid-column:grid-column-start/grid-column-end; Using grid-column-end:-1; to take automatically last column width of the id #ex7box-8..To see the negative numbering go to inspect and click on grid. */
+}
+
+
+/* Example 8: grid-row:grid-row-start/grid-row-end; It specifies a grid item's size and location in a grid layout rowwise from where to start and where to end heightwise.To see the numbering go to inspect and click on grid.  */
+.ex8container{
+
+    height: 600px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px 200px;/*  Using grid-template-columns: 200px 200px 200px; we have define 3columns with the width 200px,200px & 200px but using px it is not responsive*/
+
+    
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex8box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+/* Testcase 1: Using simple values */
+#ex8box-1{
+    background-color: bisque;
+     /* grid-row-start: 1; Using grid-row-start Specifies on which row to start displaying the item heightwise.To see the numbering go to inspect and click on grid. */
+     /* grid-row-end: 3;Using grid-row-end Specifies on which row-line to stop displaying the item heightwise.To see the numbering go to inspect and click on grid. */
+     grid-row: 1/3;/* grid-row:grid-row-start/grid-row-end; */
+}
+
+/* Testcase 2: Using span */
+#ex8box-4{
+    background-color: bisque;
+    grid-row: 2/span 2;/* grid-row:grid-column-start/grid-column-end; Using grid-row-end:span 2; to take 2row height of the id #ex8box-4*/
+}
+
+
+/* Example 9: grid-area(Comibination of grid-column & grid-row) Properties syntax: grid-row-start/grid-column-start/grid-row-end/grid-column-end.It specifies a grid item's size and location in a grid layout rowwise & columnwise from where to start and where to end heightwise & widthwise.To see the numbering go to inspect and click on grid.  */
+.ex9container{
+
+    height: 600px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+    grid-template-columns: 200px 200px 200px;/*  Using grid-template-columns: 200px 200px 200px; we have define 3columns with the width 200px,200px & 200px but using px it is not responsive*/
+
+    
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex9box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+/* Testcase 1: Using simple values */
+#ex9box-1{
+    background-color: bisque;
+    grid-area: 1/1/3/3;/* grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
+}
+
+/* Example 10 Layout1: grid-template-areas  */
+.ex10container{
+
+    height: 600px;
+    border: 2px solid red;
+    display:grid ;/* Using display:grid; the children is in block/top-to-bottom/rowwise  position */
+   
+    /* Note : You can give any names in grid-template-areas properties */
+    grid-template-areas: "hdr hdr hdr hdr"
+                         "sbr main main main"
+                         "sbr main main main"
+                         "ftr ftr ftr ftr";   /*  You can "name" grid items by using the grid-area property, and then reference to the "name" in the grid-template-areas property. */
+
+    
+    gap:10px;/* Equal 10px Gap rowwise and columnwise between all the child elements */
+    /*row-gap:10px; Equal 10px Gap rowwise between all the child elements */
+    /*column-gap:10px; Equal 10px Gap columnwise between all the child elements */
+}
+
+.ex10box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+#ex10box-1{
+    grid-area:hdr;
+}
+
+#ex10box-2{
+    grid-area:sbr;
+}
+
+#ex10box-3{
+    grid-area:main;
+}
+
+#ex10box-4{
+    grid-area:ftr;
+}
+
+
+/* Example 11 Layout2*/
+.ex11container{
+    height: 600px;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap:10px;
+}
+
+.ex11box{
+    border:2px solid green;
+    padding: 12px;
+}
+
+#ex11box-1{
+    background-color: green;
+    grid-row: 1/4;
+}
+
+#ex11box-2{
+    background-color: green;
+    grid-column: 2/4;
+}
+
+#ex11box-3{
+    background-color: red;
+}
+
+#ex11box-4{
+    background-color:greenyellow;
+}
+
+#ex11box-5{
+    background-color:red;
+}
+
+#ex11box-6{
+    background-color:green;
+    grid-area:2/4/4/4;
+}
+
+#ex11box-7{
+    background-color:red;
+}
+
+#ex11box-8{
+    background-color:greenyellow;
+}
+
+
+
